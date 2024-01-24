@@ -8,6 +8,12 @@ module.exports = defineConfig({
             'cypress/e2e/2-advanced-examples/*',
         ],
         watchForFileChanges: false,
+        env: {
+            stage: 'https://stage.pasv.us/',
+            prod: 'https://coding.pasv.us/',
+            info: 'Hello Raf',
+        },
+        defaultCommandTimeout: 10000,
         // setupNodeEvents(on, config) {
         //   // implement node event listeners here
         // },
