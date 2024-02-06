@@ -2,6 +2,7 @@ class LoginDemoQA {
     userName: string = '#userName'
     password: string = '#password'
     loginButton: string = '#login'
+    //logoutButton: string = 'Log out'
     //logoutButton: string = '#submit'
 
     submitButtonLogin() {
