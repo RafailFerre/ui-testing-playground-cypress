@@ -14,20 +14,31 @@ describe('Delay testing', () => {
             expect(text).to.equal('I am alerting you!')
         })
         cy.get('#alert_trigger').should('be.disabled')
+        cy.on('window:confirm', () => true)
         cy.get('#alert_handled_badge')
             .should('be.visible')
             .and('have.text', 'Alert\n                                handled')
+        cy.get('#alert_trigger').should('be.enabled')
     })
-    it('Wait for prompt to be present', () => {
+    it.only('Wait for prompt to be present OK', () => {
         cy.get('#confirm_ok').should('not.be.visible')
+        cy.get('#prompt_trigger').should('be.visible').and('be.enabled').click()
+        cy.get('#prompt_trigger').should('be.disabled')
+        cy.on('window:prompt', (text) => {
+            expect(text).to.equal("Choose wisely... It's your life!")
+        })
+        cy.on('window:confirm', () => true)
+        cy.get('#confirm_ok').should('be.visible')
+    })
+    it.only('Wait for prompt to be present CANCEL', () => {
         cy.get('#confirm_cancelled').should('not.be.visible')
         cy.get('#prompt_trigger').should('be.visible').and('be.enabled').click()
         cy.get('#prompt_trigger').should('be.disabled')
         cy.on('window:prompt', (text) => {
             expect(text).to.equal("Choose wisely... It's your life!")
         })
-        cy.get('#confirm_ok').should('be.visible')
-        cy.get('#confirm_cancelled').should('not.be.visible')
+        cy.on('window:confirm', () => false)
+        cy.get('#confirm_cancelled').should('be.visible')
     })
     it('Wait for element to be visible', () => {
         cy.get('#visibility_trigger').should('be.visible').click()
