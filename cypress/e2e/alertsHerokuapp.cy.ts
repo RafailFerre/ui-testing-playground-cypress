@@ -38,8 +38,8 @@ describe('Alerts', () => {
     it('Click for JS Prompt', () => {
         AlertHerokuaapPage.promptJS()
         // const text = 'Hello Raf!'
-        // cy.window().then(($win) => {
-        //     cy.stub($win, 'prompt').returns(text)
+        // cy.window().then((win) => {
+        //     cy.stub(win, 'prompt').returns(text)
         //     cy.contains('button', 'Click for JS Prompt').click()
         // })
         // cy.get('#result').should('have.text', 'You entered: Hello Raf!')

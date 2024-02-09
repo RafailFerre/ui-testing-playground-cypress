@@ -42,8 +42,8 @@ class AlertHerokuaap {
     }
     promptJS() {
         const text = 'Hello Raf!'
-        cy.window().then(($win) => {
-            cy.stub($win, 'prompt').returns(text)
+        cy.window().then((win) => {
+            cy.stub(win, 'prompt').returns(text)
             cy.contains(this.selectorButton, this.promptTextButton).click()
         })
         cy.get(this.selectorResult).should(
