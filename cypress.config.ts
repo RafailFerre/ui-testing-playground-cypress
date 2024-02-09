@@ -15,8 +15,9 @@ module.exports = defineConfig({
             urlHomeWork:
                 'https://play1.automationcamp.ir/expected_conditions.html',
             urlDemoQA: 'https://demoqa.com',
+            urlAlert: 'https://the-internet.herokuapp.com/',
         },
-        defaultCommandTimeout: 16000,
+        defaultCommandTimeout: 15000,
         // setupNodeEvents(on, config) {
         //   // implement node event listeners here
         // },
