@@ -41,15 +41,12 @@ class AlertHerokuaap {
         cy.get(this.selectorResult).should('have.text', 'You entered: null')
     }
     promptJS() {
-        const text = 'Hello Raf!'
+        const text: string = 'Hello Raf!'
         cy.window().then((win) => {
             cy.stub(win, 'prompt').returns(text)
             cy.contains(this.selectorButton, this.promptTextButton).click()
         })
-        cy.get(this.selectorResult).should(
-            'have.text',
-            'You entered: Hello Raf!'
-        )
+        cy.get(this.selectorResult).should('have.text', `You entered: ${text}`)
     }
 }
 

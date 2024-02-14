@@ -11,7 +11,7 @@ describe('Verify alerts for DemoQA', () => {
         // })
         // cy.on('window:confirm', () => true)
     })
-    it('On button click, alert will appear after 5 seconds', () => {
+    it.only('On button click, alert will appear after 5 seconds', () => {
         AlertDemoQAPage.timerAlertJS()
         // cy.get('#timerAlertButton').click()
         // cy.on('window:alert', (text) => {
@@ -39,7 +39,7 @@ describe('Verify alerts for DemoQA', () => {
         // cy.on('window:confirm', () => false)
         // cy.get('#confirmResult').should('be.visible').and('have.text', 'You selected Cancel')
     })
-    it.only('On button click, prompt box will appear', () => {
+    it('On button click, prompt box will appear', () => {
         AlertDemoQAPage.promptJS()
         // cy.window().then((win) => {
         //     cy.stub(win, 'prompt').returns('Hello Hello')

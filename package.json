@@ -15,5 +15,8 @@
         "cypress": "^13.6.3",
         "prettier": "3.2.4",
         "typescript": "^5.3.3"
+    },
+    "dependencies": {
+        "cypress-iframe": "^1.0.1"
     }
 }

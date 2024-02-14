@@ -1,7 +1,7 @@
 import { AlertHerokuaapPage } from '../../pages/AlertHerokuaap'
 describe('Alerts', () => {
     beforeEach(() => {
-        cy.visit(`${Cypress.env('urlAlert')}/javascript_alerts`)
+        cy.visit(`${Cypress.env('urlHerokuapp')}/javascript_alerts`)
     })
     it('Click for JS Alert', () => {
         AlertHerokuaapPage.alertJS()

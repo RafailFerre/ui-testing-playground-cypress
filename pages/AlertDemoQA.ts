@@ -2,7 +2,7 @@ class AlertDemoQA {
     private alertButton: string = '#alertButton'
     private timerAlertButton: string = '#timerAlertButton'
     private confirmButton: string = '#confirmButton'
-    private promtButton: string = '#promtButton'
+    private promptButton: string = '#promtButton'
     private confirmResult: string = '#confirmResult'
     private promptResult: string = '#promptResult'
 
@@ -44,8 +44,8 @@ class AlertDemoQA {
     }
     promptJS() {
         cy.window().then((win) => {
-            cy.stub(win, 'prompt').returns('Hello Hello')
-            cy.get(this.promtButton).click()
+            cy.stub(win, 'prompt').returns('    Hello Hello'.trim())
+            cy.get(this.promptButton).click()
         })
         cy.get(this.promptResult).should('have.text', 'You entered Hello Hello')
     }
