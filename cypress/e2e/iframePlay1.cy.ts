@@ -7,4 +7,13 @@ describe('Verify Iframes with plugin', () => {
     it('Iframe1', () => {
         IframePlay1Page.getIframe1()
     })
+    it('Iframe2', () => {
+        IframePlay1Page.getIframe2()
+    })
+    it('Iframe3', () => {
+        IframePlay1Page.getIframe3()
+    })
+    it('Iframe4', () => {
+        IframePlay1Page.getIframe4()
+    })
 })
