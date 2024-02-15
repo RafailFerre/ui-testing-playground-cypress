@@ -12,6 +12,10 @@ class LoginDemoQA {
         cy.get(this.loginButton).click()
         //cy.contains(this.logoutButton)
     }
+    visitLoginPage() {
+        cy.visit(`${Cypress.env('urlDemoQA')}/login`)
+        cy.contains('Log out')
+    }
 }
 
 export const LoginPage = new LoginDemoQA()
