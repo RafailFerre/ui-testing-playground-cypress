@@ -2,6 +2,7 @@ import { TestBoxPage } from '../../pages/TestBoxDemoQA'
 
 describe('Test Box', () => {
     beforeEach(() => {
+        cy.intercept({ resourceType: /xhr|fetch/ }, { log: false })
         cy.visit(`${Cypress.env('urlDemoQA')}/text-box`)
     })
     it('Verify field text-box page', () => {

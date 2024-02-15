@@ -2,6 +2,7 @@ import { LoginPage } from '../../pages/LoginDemoQA'
 
 describe('Login Page', () => {
     beforeEach(() => {
+        cy.intercept({ resourceType: /xhr|fetch/ }, { log: false })
         cy.visit(`${Cypress.env('urlDemoQA')}/login`)
     })
     it('verify login', () => {

@@ -1,6 +1,7 @@
 import { AlertDemoQAPage } from '../../pages/AlertDemoQA'
 describe('Verify alerts for DemoQA', () => {
     beforeEach(() => {
+        cy.intercept({ resourceType: /xhr|fetch/ }, { log: false })
         cy.visit(`${Cypress.env('urlDemoQA')}/alerts`)
     })
     it('Click Button to see alert', () => {
@@ -11,7 +12,7 @@ describe('Verify alerts for DemoQA', () => {
         // })
         // cy.on('window:confirm', () => true)
     })
-    it.only('On button click, alert will appear after 5 seconds', () => {
+    it('On button click, alert will appear after 5 seconds', () => {
         AlertDemoQAPage.timerAlertJS()
         // cy.get('#timerAlertButton').click()
         // cy.on('window:alert', (text) => {
