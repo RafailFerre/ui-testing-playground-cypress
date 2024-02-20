@@ -10,4 +10,4 @@ class LoginLocalCoding {
     }
 }
 
-export const LoginLocalCoding = new LoginLocalCoding()
+export const LoginLocalCodingPage = new LoginLocalCoding()

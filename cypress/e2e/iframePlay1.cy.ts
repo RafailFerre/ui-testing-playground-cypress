@@ -1,6 +1,6 @@
 import { IframePlay1Page } from '../../pages/IframePlay1'
 
-describe('Verify Iframes with plugin', () => {
+describe('Verify Iframes without plugin', () => {
     beforeEach(() => {
         cy.visit(`${Cypress.env('urlPlay1')}/frames.html`)
     })
@@ -15,5 +15,16 @@ describe('Verify Iframes with plugin', () => {
     })
     it('Iframe4', () => {
         IframePlay1Page.getIframe4()
+    })
+})
+describe('Verify Iframes with plugin', () => {
+    beforeEach(() => {
+        cy.visit(`${Cypress.env('urlPlay1')}/frames.html`)
+    })
+    it('Iframe1 with plugin', () => {
+        IframePlay1Page.getIframe1Plugin()
+    })
+    it.only('Iframe2 with plugin', () => {
+        IframePlay1Page.getIframe2Plugin()
     })
 })

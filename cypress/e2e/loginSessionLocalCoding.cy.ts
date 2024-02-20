@@ -1,11 +1,11 @@
-import { LoginLocalCoding } from '../../pages/LoginLocalCoding'
+import { LoginLocalCodingPage } from '../../pages/LoginLocalCoding'
 
 //Cypress.session.getCurrentSessionData()
 describe('Login and save session on LocalCoding', () => {
     beforeEach(() => {
         cy.session('myCurrentSession', () => {
             cy.visit('https://coding.pasv.us/user/login')
-            LoginLocalCoding.login()
+            LoginLocalCodingPage.login()
             // cy.get('#normal_login_email').type(Cypress.env('email'))
             // cy.get('#normal_login_password').type(Cypress.env('password'))
             // cy.get('[type="submit"]').click()

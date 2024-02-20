@@ -35,3 +35,16 @@
 //     }
 //   }
 // }
+
+// declare global {
+//     namespace Cypress {
+//         interface Chainable {
+//             login(userName: string, password: string): Chainable<void>
+//         }
+//     }
+// }
+Cypress.Commands.add('login', (userName: string, password: string) => {
+    cy.get('#userName').type('test')
+    cy.get('#password').type('Test1234*')
+    cy.get('#login').click()
+})

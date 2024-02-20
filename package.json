@@ -4,7 +4,7 @@
     "description": "Cypress end-to-end testing for uitestingplayground.com",
     "main": "index.js",
     "scripts": {
-        "cy:open": "cypress open --e2e --browser electron",
+        "cy:open": "cypress open",
         "cy:run": "cypress run",
         "prettier": "npx prettier . --write"
     },

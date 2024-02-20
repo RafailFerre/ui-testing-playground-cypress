@@ -1,4 +1,4 @@
-import { LoginPage } from '../../pages/LoginDemoQA'
+// import { LoginPage } from '../../pages/LoginDemoQA'
 
 describe('Login Page', () => {
     beforeEach(() => {
@@ -6,7 +6,8 @@ describe('Login Page', () => {
         cy.visit(`${Cypress.env('urlDemoQA')}/login`)
     })
     it('Verify login', () => {
-        LoginPage.submitButtonLogin()
+        cy.login('test', 'Test1234*')
+        // LoginPage.submitButtonLogin()
         // cy.get('#userName').type('test')
         // cy.get('#password').type('Test1234*')
         // cy.get('#login').click()

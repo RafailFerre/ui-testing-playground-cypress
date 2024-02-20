@@ -3,11 +3,11 @@ class IframeHerokuapp {
     getIframe() {
         cy.frameLoaded(this.iframeSelector)
         //cy.iframe().contains('Your content goes here.').should('be.visible')
-        cy.iframe(this.iframeSelector).then(($iframe) => {
+        cy.iframe(this.iframeSelector).then((iframe) => {
             cy.pause()
-            cy.wrap($iframe).type('{selectAll}{del}')
-            cy.wrap($iframe).type('Hello Raf')
-            cy.wrap($iframe).clear().type('Hello Raf').contains('Hello Raf')
+            cy.wrap(iframe).type('{selectAll}{del}')
+            cy.wrap(iframe).type('Hello Raf')
+            cy.wrap(iframe).clear().type('Hello Raf').contains('Hello Raf')
         })
     }
     visit() {
