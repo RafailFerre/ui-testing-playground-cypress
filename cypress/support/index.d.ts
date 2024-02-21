@@ -7,6 +7,6 @@ declare namespace Cypress {
          * @example
          * cy.login('test', 'Test1234*')
          */
-        login(email: string, password: string): Chainable<any>
+        login(userName: string, password: string): Chainable<any>
     }
 }

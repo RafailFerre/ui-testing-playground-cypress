@@ -44,4 +44,7 @@ describe('Alerts', () => {
         // })
         // cy.get('#result').should('have.text', 'You entered: Hello Raf!')
     })
+    it.only('click prompt and type empty', () => {
+        AlertHerokuaapPage.promptJSEmpty()
+    })
 })

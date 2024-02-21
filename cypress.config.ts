@@ -18,9 +18,13 @@ module.exports = defineConfig({
             urlHerokuapp: 'https://the-internet.herokuapp.com/',
             urlPlay1: 'https://play1.automationcamp.ir/',
         },
-        defaultCommandTimeout: 16000,
         // setupNodeEvents(on, config) {
         //   // implement node event listeners here
         // },
+    },
+    defaultCommandTimeout: 16000,
+    retries: {
+        runMode: 3,
+        openMode: 2,
     },
 })
