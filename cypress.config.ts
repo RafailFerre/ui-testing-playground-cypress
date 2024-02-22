@@ -1,7 +1,21 @@
 import { defineConfig } from 'cypress'
 
 module.exports = defineConfig({
+    reporter: 'cypress-mochawesome-reporter',
+    video: true,
+    screenshotOnRunFailure: true,
+    reporterOptions: {
+        charts: true,
+        reportPageTitle: 'custom-title',
+        embeddedScreenshots: true,
+        inlineAssets: true,
+        saveAllAttempts: false,
+    },
     e2e: {
+        setupNodeEvents(on, config) {
+            require('cypress-mochawesome-reporter/plugin')(on)
+            // implement node event listeners here
+        },
         baseUrl: 'https://uitestingplayground.com',
         excludeSpecPattern: [
             'cypress/e2e/1-getting-started/*',
@@ -18,13 +32,10 @@ module.exports = defineConfig({
             urlHerokuapp: 'https://the-internet.herokuapp.com/',
             urlPlay1: 'https://play1.automationcamp.ir/',
         },
-        // setupNodeEvents(on, config) {
-        //   // implement node event listeners here
-        // },
     },
     defaultCommandTimeout: 16000,
-    retries: {
-        runMode: 3,
-        openMode: 2,
-    },
+    // retries: {
+    //     runMode: 3,
+    //     openMode: 2,
+    // },
 })
