@@ -24,8 +24,9 @@ module.exports = defineConfig({
         watchForFileChanges: false,
         env: {
             stage: 'https://stage.pasv.us',
+            emailStage: 'test@mail.com',
+            passwordStage: 'Test1234',
             prod: 'https://coding.pasv.us',
-            info: 'Hello Raf',
             urlHomeWork:
                 'https://play1.automationcamp.ir/expected_conditions.html',
             urlDemoQA: 'https://demoqa.com',

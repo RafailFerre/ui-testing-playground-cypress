@@ -9,8 +9,8 @@ class AutoFillDemoQA {
         }
         cy.get(this.inputFieldSelector).eq(0).type(Object.keys(obj)[0]) //type Y
         cy.contains(this.dropDownSelector, Object.values(obj)[0]).click() // click Yellow
-        //cy.get(this.resultSelector).should('have.text', Object.values(obj)[0]) //Yellow
-        cy.get(this.resultSelector).should('have.text', 'yell')
+        cy.get(this.resultSelector).should('have.text', Object.values(obj)[0]) //Yellow
+        // cy.get(this.resultSelector).should('have.text', 'yell')
     }
 }
 
