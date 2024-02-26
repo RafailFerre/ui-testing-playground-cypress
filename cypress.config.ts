@@ -24,6 +24,7 @@ module.exports = defineConfig({
         watchForFileChanges: false,
         env: {
             stage: 'https://stage.pasv.us',
+            serverStage: 'https://server-stage.pasv.us',
             emailStage: 'test@mail.com',
             passwordStage: 'Test1234',
             prod: 'https://coding.pasv.us',
