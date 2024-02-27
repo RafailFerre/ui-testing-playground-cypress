@@ -8,5 +8,6 @@ declare namespace Cypress {
          * cy.login('test', 'Test1234*')
          */
         login(userName: string, password: string): Chainable<any>
+        userId(): Chainable<any>
     }
 }

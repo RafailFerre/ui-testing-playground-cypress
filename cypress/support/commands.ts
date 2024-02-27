@@ -48,3 +48,12 @@ Cypress.Commands.add('login', (userName: string, password: string) => {
     cy.get('#password').type('Test1234*')
     cy.get('#login').click()
 })
+
+Cypress.Commands.add('userId', () => {
+    cy.request('POST', 'https://server-stage.pasv.us/user/login', {
+        email: Cypress.env('emailStage'),
+        password: Cypress.env('passwordStage'),
+    }).then((response) => {
+        Cypress.env('userId', response.body.payload.user._id)
+    })
+})
