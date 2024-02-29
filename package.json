@@ -1,11 +1,12 @@
 {
     "name": "ui-testing-playground-cypress",
     "version": "1.0.0",
-    "description": "Cypress end-to-end testing for uitestingplayground.com",
+    "description": "Cypress end-to-end testing",
     "main": "index.js",
     "scripts": {
         "cy:open": "cypress open",
-        "cy:run": "cypress run  --spec cypress/e2e/autoFillDemoQA.cy.ts",
+        "cy:run": "cypress run",
+        "cy:run1": "cypress run  --spec cypress/e2e/interceptLocalCodingKatas.cy.ts",
         "prettier": "npx prettier . --write"
     },
     "keywords": [],

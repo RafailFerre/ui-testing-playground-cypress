@@ -2,7 +2,7 @@ import { LoginStageLocalCodingPage } from '../../pages/LoginStageLocalCoding'
 
 describe('Intercept for LocalCoding Katas', () => {
     before(() => {
-        cy.userId()
+        cy.userId() // custom command to get user id
     })
 
     it('Verify network request and response page katas', function () {
