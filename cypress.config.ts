@@ -36,6 +36,8 @@ module.exports = defineConfig({
         },
     },
     defaultCommandTimeout: 16000,
+    viewportWidth: 1200,
+    viewportHeight: 700,
     // retries: {
     //     runMode: 3,
     //     openMode: 2,

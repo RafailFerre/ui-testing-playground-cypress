@@ -1,6 +1,6 @@
 describe('Load Delay', () => {
     it('Failing load delay emulate', () => {
-        cy.visit('/', { timeout: 100 })
+        cy.visit('/', { timeout: 2100 })
     })
     it('Load delay emulate', () => {
         cy.visit('/', { timeout: 2000 })

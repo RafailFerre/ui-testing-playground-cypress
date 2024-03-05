@@ -24,7 +24,7 @@ describe('Verify Iframes with plugin', () => {
     it('Iframe1 with plugin', () => {
         IframePlay1Page.getIframe1Plugin()
     })
-    it.only('Iframe2 with plugin', () => {
+    it('Iframe2 with plugin', () => {
         IframePlay1Page.getIframe2Plugin()
     })
 })

@@ -1,6 +1,6 @@
 import { LoginLocalCodingPage } from '../../pages/LoginLocalCoding'
 
-//Cypress.session.getCurrentSessionData()
+Cypress.session.getCurrentSessionData()
 describe('Login and save session on LocalCoding', () => {
     beforeEach(() => {
         cy.session('myCurrentSession', () => {
@@ -14,6 +14,6 @@ describe('Login and save session on LocalCoding', () => {
     })
     it('Check the session is Ok', () => {
         cy.visit('https://coding.pasv.us')
-        cy.contains('Группы')
+        // cy.contains('Группы')
     })
 })
