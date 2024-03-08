@@ -1,6 +1,6 @@
 import { LoginLocalCodingPage } from '../../pages/LoginLocalCoding'
 
-Cypress.session.getCurrentSessionData()
+//Cypress.session.getCurrentSessionData()
 describe('Login and save session on LocalCoding', () => {
     beforeEach(() => {
         cy.session('myCurrentSession', () => {
