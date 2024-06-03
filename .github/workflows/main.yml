@@ -1,6 +1,6 @@
 name: Cypress Actions
 
-on: push
+on:
 
 jobs:
   cypress-run:
