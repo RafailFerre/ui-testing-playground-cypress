@@ -35,7 +35,7 @@ module.exports = defineConfig({
             urlPlay1: 'https://play1.automationcamp.ir/',
         },
     },
-    defaultCommandTimeout: 16000,
+    defaultCommandTimeout: 15000,
     viewportWidth: 1200,
     viewportHeight: 700,
     // retries: {

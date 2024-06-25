@@ -26,7 +26,7 @@ describe('Intercept for LocalCoding Login and Progress', () => {
         // cy.get('#normal_login_password').type(Cypress.env('passwordStage'), {
         //     log: false,
         // })
-        // cy.get('[type="submit"]').click()
+        cy.get('[type="submit"]').click()
         cy.wait('@login').then((res) => {
             console.log(res, 'Whole response')
             //cy.log(JSON.stringify(res))
